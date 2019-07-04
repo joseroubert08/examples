@@ -3,12 +3,16 @@
   "version": "0.1.0",
   "description": "Boilerplate project repository for OpenWhisk provider with Serverless Framework.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "James Thomas <james@jamesthom.as>",
   "license": "MIT",
   "dependencies": {
     "left-pad": "^1.1.3",
-    "serverless-openwhisk": "serverless/serverless-openwhisk"
-  }
+    "serverless-openwhisk": "serverless/serverless-openwhisk",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
